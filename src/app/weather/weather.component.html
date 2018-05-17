@@ -1,0 +1,13 @@
+<input type="text" placeholder="Recherche" #search>
+<button (click)="onSubmit(search.value)">Recherche</button>
+<div>
+  {{weather.city.country}}
+  {{weather.city.name}}
+  <div *ngFor="let list of weather.list">
+    date: {{list.dt_txt}}<br>
+    desc: {{list.weather[0].description}}<br>
+    temp: {{list.main.temp}}<br>
+    max :{{list.main.temp_max}}<br>
+    min: {{list.main.temp_min}}
+  </div>
+</div>
