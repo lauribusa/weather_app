@@ -10,7 +10,6 @@ import { Weather } from '../weather.model';
 })
 export class WeatherComponent implements OnInit {
   weather: any;
-  
   constructor(public httpService : HttpService){}
   ngOnInit() {
   }
@@ -18,7 +17,9 @@ export class WeatherComponent implements OnInit {
   onSubmit(value: string){
     this.httpService.getWeather(value).then(result =>{
       this.weather = result;
-    })
+    }).catch(err=>{
+      throw err;
+    });
   }
 
 }

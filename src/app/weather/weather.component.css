@@ -5,6 +5,7 @@
     margin: 7px;
     padding: 5px;
     border-radius: 5px;
+    color:#5E210F;
     background: rgba(238, 238, 238, 0.6);
     box-sizing: border-box;
     transition: all .5s ease;
@@ -29,6 +30,7 @@
 }
 .sticker span{
     font-size: 10px;
+    color: #5E210F;
 }
 .weatherContainer{
     display: flex;
@@ -50,6 +52,7 @@
     bottom: 5px;
     right:5px;
     font-size: 20px;
+    color: #f35033;
 }
 .date{
     font-size: 14px;
@@ -99,4 +102,11 @@ h2{
     font-weight: 100;
     color: white;
     text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
+}
+h3{
+    margin: 20px 0;
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5) ;
 }
