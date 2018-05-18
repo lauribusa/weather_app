@@ -1,45 +1,58 @@
-
-
 .sticker{
     position: relative;
-    display: flex;
     width: 200px;
-    margin: 5px;
+    height: 100px;
+    margin: 7px;
     padding: 5px;
-    background: #eee;
+    border-radius: 5px;
+    background: rgba(238, 238, 238, 0.6);
+    box-sizing: border-box;
+    transition: all .5s ease;
+    box-shadow: rgba(0,0,0,0.5) 0px 2px 3px;
+}
+
+.sticker:hover{
+    background-color: rgba(235, 235, 235,1);
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.3) 0px 3px 5px;
+    transform: scale3d(1.05,1.05,1.05);
 }
 .sticker img{
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 5px;
+    top: 5px;
     width: 50px;
-    height: 50px;
-}
-
-
-
-.weatherContainer{
-    display: flex;
-    text-align: left;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 .sticker div{
     display: block;
     margin-top: 50px;
 }
 .sticker span{
-    font-size: 12px;
+    font-size: 10px;
 }
+.weatherContainer{
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .info{
     display:block;
+    position:absolute;
+    left: 5px;
+    bottom: 30px;
+    font-size: 24px;
+    font-weight: 100;
 }
-.sticker span:first-child{
+.temp{
+    position: absolute;
+    bottom: 5px;
+    right:5px;
     font-size: 20px;
-    margin-right: 20px;
 }
-.weatherContainer:nth-child(8n+8){
-    background:red;
+.date{
+    font-size: 14px;
 }
 
 .searchBar{
@@ -52,13 +65,6 @@
         -moz-border-radius: 3px 0 0 3px;
         -webkit-border-radius: 3px 0 0 3px;
         border-radius: 3px 0 0 3px;  
-/* width: 500px;
-padding: 5px;
-border:none;
-border-radius: 20px;
-height: 50px;
-font-size: 25px;
-text-align: center; */
 }
 .searchBar:focus{
     outline: none;
@@ -78,15 +84,6 @@ text-align: center; */
         -moz-border-radius: 0 3px 3px 0;
         -webkit-border-radius: 0 3px 3px 0;
         border-radius: 0 3px 3px 0;      
-    /* padding: 10px 5px;   
-    border: none;
-    background: #eee;
-    -moz-border-radius: 3px 0 0 3px;
-    -webkit-border-radius: 3px 0 0 3px;
-    border-radius: 3px 0 0 3px;  
-    background:white;
-    cursor:pointer;
-    font-size: 25px; */
 }
 .searchButton:hover{
     background: #d83c3c;
@@ -95,14 +92,11 @@ text-align: center; */
 .searchButton:focus{
     outline:none;
 }
-.weatherContainer .sticker:nth-child(8n+8)::before{
-    background: red;
-}
 
 h2{
     margin: 20px 0;
-
     font-size: 75px;
-
     font-weight: 100;
+    color: white;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.5) ;
 }

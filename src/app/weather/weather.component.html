@@ -1,15 +1,15 @@
-<input class="searchBar" type="text" placeholder="Recherche" #search required>
+<input class="searchBar" type="text" placeholder="Entrez une ville..." #search required>
 <button class="searchButton" (click)="onSubmit(search.value)">Valider</button>
 <div>
   
   <h2>{{weather.city.name}}</h2>{{weather.city.country}}
   <ul class="weatherContainer">
       <li class="sticker" *ngFor="let list of weather.list">
-          <p class="info">{{list.dt_txt}}<br>{{list.weather[0].description}}</p>
-          <div ng-if="list.weather[0].main" ></div>
-          <img src="http://openweathermap.org/img/w/{{list.weather[0].icon}}.png">
-          <div>{{list.main.temp}}
-            {{list.main.temp_max}}/{{list.main.temp_min}}
+        <p class="date">{{list.dt_txt}}</p><br>  
+        <p class="info">{{list.weather[0].description}}</p>
+          <img src="../../assets/{{list.weather[0].main}}.svg">
+          <div class="temp">{{list.main.temp}}
+            <span>{{list.main.temp_min}}/{{list.main.temp_max}}</span>
           </div>
           
       </li>
